@@ -1,3 +1,21 @@
+## SPU specific files -------
+
+# Targets directry
+_targets.R
+
+# All pipeline output
+out
+*/in/*
+*/out/*
+!data/in/.empty
+!data/out/.empty
+
+# vault/*
+!*/.empty
+
+
+# ---------------------------
+
 # History files
 .Rhistory
 .Rapp.history
