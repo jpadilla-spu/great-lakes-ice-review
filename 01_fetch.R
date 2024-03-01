@@ -20,8 +20,8 @@ p1_targets <- list(
   tar_target(
     p1_noaa_coastwatch_ice,
     fetch_ice_data(
-      pattern_fill = c("g2022_2023_ice"),
-      download_pattern = "https://coastwatch.glerl.noaa.gov/statistic/ice/dat/%s.dat",
+      pattern_fill = c("g2023_2024_ice"),
+      download_pattern = "https://apps.glerl.noaa.gov/coastwatch/webdata/statistic/ice/dat/%s.dat",
       outpath_pattern = "data/out/noaa_coastwatch_%s.txt",
       use_vector_names = FALSE
     ),

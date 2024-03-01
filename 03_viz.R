@@ -86,7 +86,7 @@ p3_targets <- list(
     create_final_plot(
       ls_gl_plots = p3_ls_combo_plots_bar,
       legend = NULL,
-      ttl = "Maximum Percent Ice Cover in the Great Lakes: Difference from 50-year Mean (1973-2023)",
+      ttl = "Maximum Percent Ice Cover in the Great Lakes: Difference from 51-year Mean (1973-2024)",
       out_path = "out/Great_Lakes_Ice_Cover_bar_wide.png"
     )
   ),
@@ -97,8 +97,8 @@ p3_targets <- list(
     create_final_plot(
       ls_gl_plots = p3_ls_combo_plots_lolli,
       legend = p3_shared_legend_lolli,
-      ttl = "Maximum Percent Ice Cover in the Great Lakes: Difference from 50-year Mean (1973-2023)",
-      out_path = NULL #"out/Great_Lakes_Ice_Cover_lolli_wide.png"
+      ttl = "Maximum Percent Ice Cover in the Great Lakes: Difference from 51-year Mean (1973-2024)",
+      out_path = NULL#"out/Great_Lakes_Ice_Cover_lolli_wide.png"
     )
   )
     
