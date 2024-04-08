@@ -98,7 +98,7 @@ p3_targets <- list(
       ls_gl_plots = p3_ls_combo_plots_lolli,
       legend = p3_shared_legend_lolli,
       ttl = "Maximum Percent Ice Cover in the Great Lakes: Difference from 51-year Mean (1973-2024)",
-      out_path = NULL#"out/Great_Lakes_Ice_Cover_lolli_wide.png"
+      out_path = NULL #"out/Great_Lakes_Ice_Cover_lolli_wide.png"
     )
   )
     

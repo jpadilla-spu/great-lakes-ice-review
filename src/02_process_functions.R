@@ -37,7 +37,7 @@ parse_glicd_ice <- function(in_file) {
     ) |> 
     arrange(date) |> 
     filter(!is.na(date)) |>  # removing non-leap year 2/29 dates
-    filter(!(wy == 2023)) |>  # removing incomplete water year
+    filter(!(wy == 2024)) |>  # removing incomplete water year
     select(lake, year, wy, date, yday, wy_yday, perc_ice_cover)
 
   return(out)
@@ -132,7 +132,7 @@ calc_wy_yday <- function(yr, dt) {
 #'
 #' @return A tibble containing the summary statistics of ice coverage for each lake.
 
-calc_ice_summary_stats <- function(ice_tibble, homes_order = TRUE) {
+calc_ice_summary_stats <- function(ice_tibble, wy, homes_order = TRUE) {
   
   # calculate data.frame for max ice and yday by water year
   df_max_ice_yday <- ice_tibble |> 
@@ -151,13 +151,13 @@ calc_ice_summary_stats <- function(ice_tibble, homes_order = TRUE) {
   
   # grab 2023 ice cover
   df_2023 <- df_max_ice_yday |> 
-    filter(wy == 2023) |> 
-    select(lake, perc_ice_2023 = perc_ice_cover)
+    filter(wy == wy) |> 
+    select(lake, perc_ice_wy = perc_ice_cover)
   
   df_summary <- left_join(df_avg, df_2023) |> 
     mutate(
-      abs_change = round(perc_ice_2023 - avg_perc_ice, 2),
-      rpd = round((perc_ice_2023 - avg_perc_ice) / avg_perc_ice * 100, 2)
+      abs_change = round(perc_ice_wy - avg_perc_ice, 2),
+      rpd = round((perc_ice_wy - avg_perc_ice) / avg_perc_ice * 100, 2)
     )
   
   # re-org data
