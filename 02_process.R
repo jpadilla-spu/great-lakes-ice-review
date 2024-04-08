@@ -9,7 +9,7 @@ p2_targets <- list(
     p1_noaa_glicd_ice |> map(parse_glicd_ice) |> bind_rows()
   ),
   
-  # parse 2023 ice
+  # parse 2024 ice
   tar_target(
     p2_noaa_coastwatch_ice_clean,
     parse_coastwatch_ice(p1_noaa_coastwatch_ice)
@@ -24,7 +24,7 @@ p2_targets <- list(
   # calc summary for alt-text
   tar_target(
     p2_ice_summary,
-    calc_ice_summary_stats(p2_ice_data, homes_order = FALSE)
+    calc_ice_summary_stats(p2_ice_data, wy = 2024, homes_order = FALSE)
   )
   
 )
