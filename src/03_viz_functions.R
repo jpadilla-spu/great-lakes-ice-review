@@ -145,7 +145,7 @@ annual_max_ice_plot <- function(ice_tibble, homes_factor = TRUE) {
     geom_smooth(method = lm, se = FALSE) +
     geom_hline(aes(yintercept = perc_ice_avg), color = "gray15", linetype = "dashed") +
     labs(title = "", x = "", y = "") +
-    scale_x_continuous(breaks = seq(from = 1975, to = 2020, by = 5)) +
+    scale_x_continuous(breaks = seq(from = 1975, to = 2025, by = 5)) +
     facet_grid(vars(lake), switch = "y") +
     theme_minimal() +
     theme(strip.text = element_blank()) +
