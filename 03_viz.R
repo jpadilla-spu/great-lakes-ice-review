@@ -37,7 +37,7 @@ p3_targets <- list(
   # extract one legend before combining plots
   tar_target(
     p3_shared_legend_lolli,
-    get_legend(p3_max_ice_ts_lolli[[1]])
+    cowplot::get_legend(p3_max_ice_ts_lolli[[1]])
   ),
 
   # combine ice plots and maps -----------------------
@@ -77,7 +77,7 @@ p3_targets <- list(
       ls_gl_plots = p3_ls_combo_plots_point,
       legend = NULL,
       ttl = "Trends in Maximum Percent Ice Cover in the Great Lakes (1973-2025)",
-      out_path = "out/Great_Lakes_Ice_Cover_pt_wide.png"
+      out_path = NULL#"out/Great_Lakes_Ice_Cover_pt_wide.png"
     )
   ),
   

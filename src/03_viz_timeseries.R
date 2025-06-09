@@ -88,7 +88,7 @@ create_ice_pointplot <- function(tbl) {
     geom_smooth(method = lm, se = FALSE, linewidth = 0.25) +
     geom_hline(aes(yintercept = perc_ice_avg), color = "gray15", linetype = "dashed") +
     labs(title = "", x = "", y = "") +
-    scale_x_continuous(breaks = seq(from = 1975, to = 2020, by = 5)) +
+    scale_x_continuous(breaks = seq(from = 1975, to = 2025, by = 5)) +
     scale_y_continuous(limits = c(0,100)) +
     theme_minimal() +
     theme(axis.text.y = element_text(size = 14))
@@ -121,7 +121,7 @@ create_ice_barplot <- function(tbl) {
     ggplot(data = tbl, aes(wy, ice_rpd)) + 
     geom_bar(stat = "identity") +
     labs(title = "", x = "", y = "") +
-    scale_x_continuous(breaks = seq(from = 1975, to = 2020, by = 5)) +
+    scale_x_continuous(breaks = seq(from = 1975, to = 2025, by = 5)) +
     scale_y_continuous(limits = c(-100, 100)) +
     theme_minimal() +
     theme(axis.text.y = element_text(size = 14))

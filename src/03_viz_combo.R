@@ -112,7 +112,7 @@ create_final_plot <- function(ls_gl_plots, ttl, legend = NULL, out_path = NULL) 
 
   if(is.null(legend)) {
     
-    out_plot_w_labs <- plot_grid(
+    out_plot_w_labs <- cowplot::plot_grid(
       title, out_plot,
       ncol = 1,
       rel_heights = c(0.1, 1)
@@ -120,7 +120,7 @@ create_final_plot <- function(ls_gl_plots, ttl, legend = NULL, out_path = NULL) 
     
   } else {
     
-    out_plot_w_labs <- plot_grid(
+    out_plot_w_labs <- cowplot::plot_grid(
       title, legend, out_plot,
       ncol = 1,
       rel_heights = c(0.1, 0.1, 1)
