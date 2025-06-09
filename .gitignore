@@ -1,7 +1,7 @@
 ## SPU specific files -------
 
-# Targets directry
-_targets.R
+# Targets directory
+_targets/
 
 # All pipeline output
 out
